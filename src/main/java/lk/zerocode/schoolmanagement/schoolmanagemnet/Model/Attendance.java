@@ -2,6 +2,7 @@ package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
 
 
 import jakarta.persistence.*;
+import lk.zerocode.schoolmanagement.schoolmanagemnet.Model.Enums.AttendanceType;
 import lombok.Data;
 import java.time.LocalDate;
 
@@ -14,12 +15,6 @@ public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
-    private String entity;
-
-    @Column(name = "entity_id", nullable = false)
-    private Long entityId;
 
     @Column(nullable = false)
     private LocalDate date;
@@ -37,6 +32,6 @@ public class Attendance {
 
     private String type;
 
-    @Column(nullable = false)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private AttendanceType status;
 }
