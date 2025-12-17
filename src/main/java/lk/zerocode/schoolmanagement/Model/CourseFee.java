@@ -18,6 +18,8 @@ public class CourseFee {
 
     private LocalDate year;
 
+    private Double price;
+
     @OneToOne
     @JoinColumn(
             name = "grade_id",
