@@ -1,7 +1,7 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
+package lk.zerocode.schoolmanagement.Model;
 
 import jakarta.persistence.*;
-import lk.zerocode.schoolmanagement.schoolmanagemnet.Model.Enums.Gender;
+import lk.zerocode.schoolmanagement.Model.Enums.Gender;
 import lombok.Data;
 
 import java.time.LocalDate;

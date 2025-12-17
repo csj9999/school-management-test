@@ -1,8 +1,8 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
+package lk.zerocode.schoolmanagement.Model;
 
 
 import jakarta.persistence.*;
-import lk.zerocode.schoolmanagement.schoolmanagemnet.Model.Enums.AttendanceType;
+import lk.zerocode.schoolmanagement.Model.Enums.AttendanceType;
 import lombok.Data;
 import java.time.LocalDate;
 
