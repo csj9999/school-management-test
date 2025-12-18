@@ -4,24 +4,26 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "extracurriculars")
+@Table(name = "discounts")
 @Data
-public class Extracurricular {
+public class Discount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String type;
 
     @Column(nullable = false)
     private String name;
 
-    private String description;
+    @Column(nullable = false)
+    private BigDecimal value;
 
-    private BigDecimal fee;
+    @Column(name = "applicable_to")
+    private String applicableTo;
 }

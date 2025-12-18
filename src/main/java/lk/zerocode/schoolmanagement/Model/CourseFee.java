@@ -3,6 +3,7 @@ package lk.zerocode.schoolmanagement.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -18,7 +19,7 @@ public class CourseFee {
 
     private LocalDate year;
 
-    private Double price;
+    private BigDecimal price;
 
     @OneToOne
     @JoinColumn(

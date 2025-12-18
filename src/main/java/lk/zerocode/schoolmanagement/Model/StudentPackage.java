@@ -4,24 +4,24 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "extracurriculars")
+@Table(name = "student_packages")
 @Data
-public class Extracurricular {
+public class StudentPackage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String type;
 
     @Column(nullable = false)
     private String name;
 
     private String description;
 
-    private BigDecimal fee;
+    @Column(name = "total_amount", nullable = false)
+    private BigDecimal totalAmount;
 }
