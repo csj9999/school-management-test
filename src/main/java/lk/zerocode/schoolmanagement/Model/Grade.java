@@ -1,4 +1,4 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
+package lk.zerocode.schoolmanagement.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,5 +23,8 @@ public class Grade {
 
     private String description;
 
+
+    @OneToOne(mappedBy = "grade")
+    private CourseFee courseFee;
 
 }

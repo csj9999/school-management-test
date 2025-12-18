@@ -1,4 +1,4 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
+package lk.zerocode.schoolmanagement.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 

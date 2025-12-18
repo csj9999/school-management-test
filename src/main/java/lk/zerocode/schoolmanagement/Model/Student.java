@@ -1,7 +1,7 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
+package lk.zerocode.schoolmanagement.Model;
 
 import jakarta.persistence.*;
-import lk.zerocode.schoolmanagement.schoolmanagemnet.Model.Enums.Gender;
+import lk.zerocode.schoolmanagement.Model.Enums.Gender;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -46,7 +46,11 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name = "parent_id")
-    private Class parent;
+    private Parent parent;
+
+    @ManyToOne
+    @JoinColumn(name = "payment_id")
+    private Payment payment;
 
 
 
