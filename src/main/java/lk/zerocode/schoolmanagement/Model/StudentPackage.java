@@ -15,7 +15,7 @@ public class StudentPackage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long packId;
 
     @Column(nullable = false)
     private String name;
@@ -24,4 +24,7 @@ public class StudentPackage {
 
     @Column(name = "total_amount", nullable = false)
     private BigDecimal totalAmount;
+
+    @ManyToMany(mappedBy = "studentPackageList")
+    private List <PackageDiscount> packageDiscountList;
 }

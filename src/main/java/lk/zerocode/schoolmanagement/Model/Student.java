@@ -46,7 +46,11 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name = "parent_id")
-    private Class parent;
+    private Parent parent;
+
+    @ManyToOne
+    @JoinColumn(name = "payment_id")
+    private Payment payment;
 
 
 

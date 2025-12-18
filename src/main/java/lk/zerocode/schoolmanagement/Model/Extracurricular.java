@@ -24,4 +24,6 @@ public class Extracurricular {
     private String description;
 
     private BigDecimal fee;
+
+
 }

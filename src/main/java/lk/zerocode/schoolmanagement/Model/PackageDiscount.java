@@ -1,19 +1,19 @@
 package lk.zerocode.schoolmanagement.Model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
-@Table(name = "discounts")
+@Table(name = "pack_discounts")
 @Data
-public class Discount {
+public class PackageDiscount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long disId;
 
     @Column(nullable = false)
     private String type;
@@ -26,4 +26,14 @@ public class Discount {
 
     @Column(name = "applicable_to")
     private String applicableTo;
+
+    @ManyToMany
+    @JoinTable(
+            name = "std_pack_discounts",
+            joinColumns = @JoinColumn(name = "disId"),
+            inverseJoinColumns = @JoinColumn(name = "packId")
+    )
+    private List<StudentPackage> studentPackageList;
+
+
 }
