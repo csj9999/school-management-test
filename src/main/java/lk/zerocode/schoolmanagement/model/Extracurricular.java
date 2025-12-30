@@ -1,9 +1,7 @@
-package lk.zerocode.schoolmanagement.Model;
+package lk.zerocode.schoolmanagement.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
@@ -16,11 +14,8 @@ public class Extracurricular {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String type;
-
-    @Column(nullable = false)
     private String name;
-
+    private String type;
     private String description;
 
     private BigDecimal fee;

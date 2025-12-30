@@ -1,4 +1,4 @@
-package lk.zerocode.schoolmanagement.Model.Enums;
+package lk.zerocode.schoolmanagement.model.Enums;
 
 public enum PaymentType {
 
