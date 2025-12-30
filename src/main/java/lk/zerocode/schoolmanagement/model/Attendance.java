@@ -1,15 +1,15 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet.Model;
+package lk.zerocode.schoolmanagement.model;
 
 
 import jakarta.persistence.*;
-import lk.zerocode.schoolmanagement.schoolmanagemnet.Model.Enums.AttendanceType;
+import lk.zerocode.schoolmanagement.model.Enums.AttendanceStatus;
+import lk.zerocode.schoolmanagement.model.Enums.AttendanceType;
 import lombok.Data;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "attendance")
+@Table(name = "attendances")
 @Data
-
 public class Attendance {
 
     @Id
@@ -25,13 +25,13 @@ public class Attendance {
     @Column(name = "marked_by")
     private String markedBy;
 
-    @Column(name = "session_type")
-    private String sessionType;
+    @Enumerated(EnumType.STRING)
+    private AttendanceType sessionType;
+
+    @Enumerated(EnumType.STRING)
+    private AttendanceStatus status;
 
     private String reason;
 
-    private String type;
 
-    @Enumerated(EnumType.STRING)
-    private AttendanceType status;
 }

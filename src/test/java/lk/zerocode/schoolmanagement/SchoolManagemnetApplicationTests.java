@@ -1,4 +1,4 @@
-package lk.zerocode.schoolmanagement.schoolmanagemnet;
+package lk.zerocode.schoolmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
